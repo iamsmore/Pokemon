@@ -1,4 +1,4 @@
-class Pokemon(): 
+class Pokemon():
     def __init__(self, name, level, type, max_health, current_health, ko):
         self.name = name
         self.level = level
@@ -10,7 +10,7 @@ class Pokemon():
 
     def lose_health(self, damage):
         self.current_health -= damage
-        print('{name} now has {health} helath!'.format(name=self.name, health = self.current_health))
+        print('{name} now has {health} health!'.format(name=self.name, health = self.current_health))
 
         if self.current_health <= 0:
             print('Ouch!')
@@ -20,7 +20,7 @@ class Pokemon():
     def regaining_health(self):
         if self.ko == 0:
             self.current_health += 10
-            print('{name} now has {health} helath!'.format(name=self.name, health = self.current_health))
+            print('{name} now has {health} health!'.format(name=self.name, health = self.current_health))
 
         if self.ko == 1: 
             print('{name} has fainted, you must revive this Pokemon first'.format(name=self.name))
@@ -113,22 +113,26 @@ class Trainer():
 
 
 charmander = Pokemon('Charmander', 10, 'Fire', 50, 50, 0)
-squirtle = Pokemon('Squirtle', 10, 'Water', 50, 50, 0)
+squirtle = Pokemon('Squirtle', 10, 'Water', 1000, 50, 0)
 bulbasaur = Pokemon('Bulbasaur', 10, 'Grass', 50, 50, 0)
 charizard = Pokemon('Charizard', 10, 'Fire', 50, 50, 0)
+magikarp = Pokemon('Magikarp', 10, 'Water', 100, 100, 0)
 
 Ash = Trainer([squirtle, bulbasaur], 'Ash', 3, 0)
 May = Trainer([charmander, charizard], 'May', 5, 0)
+Vaclav = Trainer([magikarp, magikarp], 'Vas', 0, 0)
+Nicolas = Trainer([squirtle, magikarp], "Nic", 0, 0)
 
 #charmander.lose_health(20)
 #May.use_potion()
 #May.use_potion()
 #May.use_potion()
 
-Ash.attack(May)
-Ash.attack(May)
-Ash.attack(May)
-Ash.attack(May)
-Ash.attack(May)
+
+Nicolas.attack(Vaclav)
+
+
+
+
 
 

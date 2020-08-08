@@ -1,0 +1,18 @@
+# Nic: 
+    - Make to-do-list
+    - Run the code when it's ready
+    - Modify pokemon.py to return instead of print to terminal
+    - 
+
+# Sean:
+    - Make sure vas get his part done
+    - kick vas out and let him back in
+    - evolution
+    - pokeballs
+    - research gui for pokemon
+
+# Vas: 
+    - Decide on (and create) csv/json/or py file for trainer log
+    - Write code in bot.py to add trainers to the list on a on_member_join event 
+    - Add more pokemon to the pokemon list, pidgeot
+    - Get kicked out (as needed) for testing server

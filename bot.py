@@ -1,23 +1,34 @@
-# Pokemon Bot 
+"""Pokemon Bot 
 
-import pokemon
+Current Commands: 
+    - _8ball (aliases: 8ball, test): returns random response
+    - ping: Returns pong, with the current latency 
+    - 
+
+"""
+from pokemon import * 
 import discord
 import random
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '.')
 
+Saph = Trainer([magikarp, magikarp], 'Vas', 2, 0)
+iamsmore = Trainer([squirtle, magikarp], "Sean", 2, 0)
+sputnicc = Trainer([charmander, charizard], 'Nic', 2, 0)
+
+
 @client.event
 async def on_ready():
     print('the bot is ready')
 
 @client.event
-async def on_member_joint(member):
-    print('Trainer {member} has joined the server.')
+async def on_member_join(member):
+    print(f'Trainer {member} has joined the server.')
 
 @client.event
 async def on_member_remove(member):
-    print('Trainer {member} has left the server.')
+    print(f'Trainer {member} has left the server.')
 
 
 
@@ -26,11 +37,16 @@ async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency*1000)}ms')
 
 @client.command()
-async def attack_vas(ctx):
-    await ctx.send(f'Vaclav is dead')
+async def battle(ctx, loser):
+    battler = ctx.author.name 
+    print(battler)
+
+    await ctx.send(battler.attack(loser))
+
+
 @client.command()
 async def attack_sean(ctx):
-    await ctx.send(f'Sean is dead')
+    await ctx.send(f'{ctx.author.name} is dead')
 
 @client.command(aliases=['8ball','test'])
 async def _8ball(ctx, *, question):
@@ -40,7 +56,7 @@ async def _8ball(ctx, *, question):
                 "Without a doubt.",
                 "Yes - definitely.",
                 "You may rely on it.",
-                "As I see it, yes.",
+                "As I see it, yes bitch.",
                 "Most likely.",
                 "Outlook good.",
                 "Yes.",
@@ -58,16 +74,7 @@ async def _8ball(ctx, *, question):
     await ctx.send(f'Qestion: {question}\nAnswer: {random.choice(responses)}')
 
 
-
-
-
-
-
-
-
-
-
-client.run('NzQxMzkwNTMwMDE3MDk5ODE2.Xy23vA.kG1gvzG0SJX2n6GHis43nBqjFdc')
+client.run('NzQxMzkwNTMwMDE3MDk5ODE2.Xy23vA.jAK41YGVLfEjHYxIzhGPyegrDaI')
 
 
 

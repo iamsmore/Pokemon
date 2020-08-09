@@ -1,20 +1,29 @@
-# Dic: 
+# Nic: 
     - Make to-do-list
     - Run the code when it's ready
     - Modify pokemon.py to return instead of print to terminal
-    - 
+    - Making sure pokemon die and dont go negative health
+    - adding healing, buying potions/balls/favors
+    - look into adding health bars
+    - look into adding pictures
 
 # Sean:
-    - Make sure vas get his part done
-    - lick vas out and let him back in
-    - evolution or god
-    - pokeballs
+    - initialize trainer with random entry level pokemon
+    - pokeballs?? (capturing when weak, higher chance of catching the weaker they are. different tiers of pokeballs)
     - research gui for pokemon
+    - add different moves for pokemon
+    - add shop to buy potions/steroids
+    - currency attribute to trainer class
+
 
 # Vas: 
-    - Write code in bot.py to add trainers to the list on a on_member_join event 
-    - Add more pokemon to the pokemon list, pidgeot
-    - Get kicked out (as needed) for testing server
+    - add experience
+        - 1 damage dealt, 3 exp
+    - evolution
+    - tweak damage numbers (fix rounding issue)
+    - integrate more pokemon types
+        - add in damage for type relationships (json stats, pokemon.py)
+    - command to see inventory, pokemon, stats (experience, etc.) EVERYTHING
 
 
 trainers are intialized on member on_member_join

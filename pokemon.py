@@ -1,3 +1,5 @@
+import random
+
 class Pokemon():
     def __init__(self, name, level, type, max_health, current_health, ko):
         self.name = name
@@ -6,6 +8,7 @@ class Pokemon():
         self.max_health = max_health
         self.current_health = current_health
         self.ko = ko
+        # self.exp = exp
 
 
     def lose_health(self, damage):
@@ -26,7 +29,7 @@ class Pokemon():
         if self.ko == 1: 
             print('{name} has fainted, you must revive this Pokemon first'.format(name=self.name))
 
-    defm knock_out(self):
+    def knock_out(self):
         self.ko = 1
         print('{name} has fainted!'.format(name=self.name))
 
@@ -36,13 +39,17 @@ class Pokemon():
         self.current_health = self.max_health
         print('{name} has been revived! Current health is {health}'.format(name=self.name, health = self.current_health))
 
+
+    #def gain_exp(self):
+    #    self.exp = 
+
     
     def make_baby(self,mate):
         #at least one pokemon needs to be level 18 to reproduce
         #they need to be same pokemon
         
         if self.name == mate.name and (self.level >= 18 or mate.level >= 18):
-            baby = Pokemon(self.name,1,self.type,self.max_health,self.max_health)
+            baby = Pokemon(self.name,1,self.type,self.max_health,self.max_health, 0)
             print(f"Congrats, you are gonna be a father to a baby")
             return baby
         else:
@@ -57,32 +64,32 @@ class Pokemon():
         
         if self.type == 'Fire':
             if victim.type == 'Grass': # x2
-                self.damage = 2 * self.level
+                self.damage = 2 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
 
             elif victim.type == 'Water': # x1/2
-                self.damage = 0.5 * self.level
+                self.damage = 0.5 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
             else:
-                self.damage = self.level
+                self.damage = (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
 
         if self.type == 'Water':
             if victim.type == 'Fire': # x2
-                self.damage = 2 * self.level
+                self.damage = 2 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
             elif victim.type == 'Grass': # x 1/2
-                self.damage = 0.5 * self.level
+                self.damage = 0.5 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
             else:
-                self.damage = self.level
+                self.damage = (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
 
         if self.type == 'Grass':
             if victim.type == 'Water': # x2
-                self.damage = 2 * self.level
+                self.damage = 2 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
 
             elif victim.type == 'Fire': # x1/2
-                self.damage = 0.5 * self.level
+                self.damage = 0.5 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
             else:
-                self.damage = self.level
+                self.damage = (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
                 
         attack_dialogue = '{attacker} has attacked {victim}!'.format(attacker=self.name, victim=victim.name)
-        lose_health_dialogue = victim.lose_health(self.damage)
+        lose_health_dialogue = victim.lose_health(round(self.damage, 2))
         return attack_dialogue + '\n' + lose_health_dialogue 
 
 
@@ -120,24 +127,10 @@ class Trainer():
         
 
 
-charmander = Pokemon('Charmander', 10, 'Fire', 50, 50, 0)
-squirtle = Pokemon('Squirtle', 10, 'Water', 1000, 50, 0)
-bulbasaur = Pokemon('Bulbasaur', 10, 'Grass', 50, 50, 0)
-charizard = Pokemon('Charizard', 10, 'Fire', 50, 50, 0)
-magikarp = Pokemon('Magikarp', 10, 'Water', 100, 100, 0)
-charmander1 = Pokemon('Charmander', 10, 'Fire', 50, 50, 0)
-
-Ash = Trainer([squirtle, bulbasaur], 'Ash', 2, 0)
-May = Trainer([charmander, charizard], 'May', 2, 0)
-Saph = Trainer([magikarp, magikarp], 'Vas', 2, 0)
-iamsmore = Trainer([squirtle, magikarp], "Sean", 2, 0)
-sputnicc = Trainer([charmander, charizard], 'Nic', 2, 0)
-
 #charmander.lose_health(20)
 #May.use_potion()
 #May.use_potion()
 #May.use_potion()
-
 #sputnicc.attack(Saph)
 
 

@@ -1,0 +1,38 @@
+[
+    {
+        "pokemon_list": [
+            "bulbasaur",
+            "squirtle"
+        ],
+        "name": "sputnicc",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "charmander"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "pidgey",
+            "magikarp"
+        ],
+        "name": "Saph",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "squirtle",
+            "squirtle"
+        ],
+        "name": "iamsmore#1415",
+        "potions": 0,
+        "currently_active": 0
+    }
+]

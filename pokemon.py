@@ -10,11 +10,13 @@ class Pokemon():
 
     def lose_health(self, damage):
         self.current_health -= damage
-        return '{name} now has {health} health!'.format(name=self.name, health = self.current_health)
 
         if self.current_health <= 0:
             print('Ouch!')
             self.knock_out()
+
+        return '{name} now has {health} health!'.format(name=self.name, health = self.current_health)
+
             
     def regaining_health(self):
         if self.ko == 0:
@@ -24,7 +26,7 @@ class Pokemon():
         if self.ko == 1: 
             print('{name} has fainted, you must revive this Pokemon first'.format(name=self.name))
 
-    def knock_out(self):
+    defm knock_out(self):
         self.ko = 1
         print('{name} has fainted!'.format(name=self.name))
 
@@ -34,7 +36,7 @@ class Pokemon():
         self.current_health = self.max_health
         print('{name} has been revived! Current health is {health}'.format(name=self.name, health = self.current_health))
 
-    '''
+    
     def make_baby(self,mate):
         #at least one pokemon needs to be level 18 to reproduce
         #they need to be same pokemon
@@ -45,7 +47,11 @@ class Pokemon():
             return baby
         else:
             print(f"These pokemon are not compatable")
-            '''
+
+    def evolution(self):
+        #check if there is available evolution
+        #every pokemon should have evolution list?
+        return     
             
     def attack(self, victim): 
         
@@ -132,7 +138,7 @@ sputnicc = Trainer([charmander, charizard], 'Nic', 2, 0)
 #May.use_potion()
 #May.use_potion()
 
-sputnicc.attack(Saph)
+#sputnicc.attack(Saph)
 
 
 

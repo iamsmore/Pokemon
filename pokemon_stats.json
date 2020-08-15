@@ -12,7 +12,8 @@
         "defense": 49,
         "sp_attack": 65,
         "sp_defense": 65,
-        "speed": 45          
+        "speed": 45,
+        "taken": false       
     },
     {
         "name": "ivysaur",
@@ -28,7 +29,9 @@
         "defense": 63,
         "sp_attack": 80,
         "sp_defense": 80,
-        "speed": 60
+        "speed": 60,
+        "taken": false
+
     },
     {
         "name": "venusaur",
@@ -44,7 +47,8 @@
         "defense": 83,
         "sp_attack": 100,
         "sp_defense": 100,
-        "speed": 80
+        "speed": 80,
+        "taken": false
     },
     {
         "name": "charmander",
@@ -60,7 +64,9 @@
         "defense": 43,
         "sp_attack": 60,
         "sp_defense": 50,
-        "speed": 65
+        "speed": 65,
+        "taken": false
+
     },
     {
         "name": "charmeleon",
@@ -76,7 +82,8 @@
         "defense": 58,
         "sp_attack": 80,
         "sp_defense": 65,
-        "speed": 80
+        "speed": 80,
+        "taken": false
     },
     {
         "name": "charizard",
@@ -92,7 +99,8 @@
         "defense": 78,
         "sp_attack": 109,
         "sp_defense": 85,
-        "speed": 100
+        "speed": 100,
+        "taken": false
     },
     {
         "name": "squirtle",
@@ -108,7 +116,8 @@
         "defense": 65,
         "sp_attack": 50,
         "sp_defense": 64,
-        "speed": 43
+        "speed": 43,
+        "taken": false
     },
     {
         "name": "wartortle",
@@ -124,7 +133,8 @@
         "defense": 80,
         "sp_attack": 65,
         "sp_defense": 80,
-        "speed": 58
+        "speed": 58,
+        "taken": false
     },
     {
         "name": "blastoise",
@@ -140,7 +150,8 @@
         "defense": 100,
         "sp_attack": 85,
         "sp_defense": 105,
-        "speed": 78
+        "speed": 78,
+        "taken": false
     },
     {
         "name": "caterpie",
@@ -156,7 +167,8 @@
         "defense": 35,
         "sp_attack": 20,
         "sp_defense": 20,
-        "speed": 45
+        "speed": 45,
+        "taken": false
     },
     {
         "name": "metapod",
@@ -172,7 +184,8 @@
         "defense": 55,
         "sp_attack": 25,
         "sp_defense": 25,
-        "speed": 30
+        "speed": 30,
+        "taken": false
     },
     {
         "name": "pidgey",
@@ -188,7 +201,8 @@
         "defense": 40,
         "sp_attack": 35,
         "sp_defense": 35,
-        "speed": 56
+        "speed": 56,
+        "taken": false
     },
     {
         "name": "pidgeotto",
@@ -204,7 +218,8 @@
         "defense": 55,
         "sp_attack": 50,
         "sp_defense": 50,
-        "speed": 71
+        "speed": 71,
+        "taken": false
     },
     {
         "name": "pidgeot",
@@ -220,7 +235,8 @@
         "defense": 75,
         "sp_attack": 70,
         "sp_defense": 70,
-        "speed": 101
+        "speed": 101,
+        "taken": false
     },
     {
         "name": "magikarp",
@@ -236,6 +252,7 @@
         "defense": 1000,
         "sp_attack": 1000,
         "sp_defense": 1000,
-        "speed": 1000
+        "speed": 1000,
+        "taken": false
     }
 ]

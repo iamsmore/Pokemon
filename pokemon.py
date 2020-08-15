@@ -15,23 +15,22 @@ class Pokemon():
         self.current_health -= damage
 
         if self.current_health <= 0:
-            print('Ouch!')
-            self.knock_out()
+            return self.knock_out()
 
-        return '{name} now has {health} health!'.format(name=self.name, health = self.current_health)
+        return '{name} now has {health} health!'.format(name=self.name, health = round(self.current_health, 2))
 
             
     def regaining_health(self):
         if self.ko == 0:
             self.current_health += 10
-            print('{name} now has {health} health!'.format(name=self.name, health = self.current_health))
+            return '{name} now has {health} health!'.format(name=self.name, health = self.current_health)
 
         if self.ko == 1: 
-            print('{name} has fainted, you must revive this Pokemon first'.format(name=self.name))
+            return '{name} has died, like died forreal forreal'.format(name=self.name)
 
     def knock_out(self):
         self.ko = 1
-        print('{name} has fainted!'.format(name=self.name))
+        return 'RIP {name} has died!!!'.format(name=self.name)
 
 
     def revive(self):
@@ -40,9 +39,11 @@ class Pokemon():
         print('{name} has been revived! Current health is {health}'.format(name=self.name, health = self.current_health))
 
 
-    #def gain_exp(self):
-    #    self.exp = 
-
+    """
+    def gain_exp(self):
+        self.exp = 0
+    """
+    
     
     def make_baby(self,mate):
         #at least one pokemon needs to be level 18 to reproduce
@@ -62,6 +63,7 @@ class Pokemon():
             
     def attack(self, victim): 
         
+
         if self.type == 'Fire':
             if victim.type == 'Grass': # x2
                 self.damage = 2 * (victim.max_health / 5) * round(1 + random.randrange(-40,40,1)/100, 2)
@@ -115,16 +117,64 @@ class Trainer():
 
     def attack(self, sufferer):
         battle_dialogue = '{self} has decided to battle {sufferer}!'.format(self=self.name, sufferer=sufferer.name)
-        #self.pokemon_list[self.currently_active].attack(sufferer.pokemon_list[sufferer.currently_active])
+
+        if sufferer.pokemon_list[sufferer.currently_active].ko == 1:
+            battle_dialogue_dead =  'You cannot attack a dead pokemon. {sufferer} please change your currently active Pokemon'.format(sufferer=sufferer.name)
+            return battle_dialogue_dead
 
         return battle_dialogue + '\n' + self.pokemon_list[self.currently_active].attack(sufferer.pokemon_list[sufferer.currently_active])
-        #print(self.pokemon_list[self.currently_active].name)
-        #print(sufferer.pokemon_list[sufferer.currently_active].name)
+
 
     def switch_pokemon(self, new):
-        print('{self} is switching Pokemon to {new_pokemon}'.format(self=self.name, new_pokemon=self.pokemon_list[new].name))
-        self.currently_active = new
+
+
+        for i in range(len(self.pokemon_list)):
+            if self.pokemon_list[i].name == new:
+                self.currently_active = i
+                return '{self} is switching Pokemon to {new_pokemon}'.format(self=self.name, new_pokemon=self.pokemon_list[i].name)
+
+
+        return 'Error: You do not own this pokemon'
+
         
+    def pokemon_status(self):
+        return_string = '------------------- Trainer {name} Summary ------------------- \n'.format(name=(self.name).upper())
+
+        return_string += '\nPOKEMONS\n'
+        for poke in self.pokemon_list:
+
+            health_bar = '----------'
+            percent_health = round((poke.current_health/poke.max_health)*10)
+            
+
+            if poke.ko == 1:
+                return_string += '- {name} [{health}] {current}/{total} HP (DEAD)'.format(name=(poke.name).upper(), current=round(poke.current_health, 2), total=poke.max_health, health=health_bar)
+
+                if self.pokemon_list[self.currently_active].name == poke.name:
+                    return_string += ' *currently active*'
+                return_string += '\n'
+
+            else:
+                health_list = list(health_bar)
+                for i in range(percent_health):
+                    health_list[i] = "+"
+
+                current_health_bar = "".join(health_list)
+            
+
+
+                return_string += '- {name} [{health}] {current}/{total} HP'.format(name=(poke.name).upper(), current=round(poke.current_health, 2), total=poke.max_health, health=current_health_bar)
+                if self.pokemon_list[self.currently_active].name == poke.name:
+                    return_string += ' *currently active*'
+                return_string += '\n'
+
+
+        return_string += '\nPotions remaining: {pots}'.format(pots=self.potions)
+
+        return return_string 
+
+
+
 
 
 #charmander.lose_health(20)

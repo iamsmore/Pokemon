@@ -51,6 +51,7 @@ responses = [
                 ]
 
 girl_names=[
+
                 'Consuelo',
                 'Kristi',
                 'Tenesha',
@@ -105,4 +106,41 @@ girl_names=[
                 'Lili',
                 'Jenny',
                 'Jonathan'
+                ]
+
+
+blink_songs = [
+                    "https://www.youtube.com/watch?v=ioNng23DkIM",
+                    "https://www.youtube.com/watch?v=bwmSjveL3Lc",
+                    "https://www.youtube.com/watch?v=Amq-qlqbjYA",
+                    "https://www.youtube.com/watch?v=IHNzOHi8sJs", 
+                    "https://www.youtube.com/watch?v=9pdj4iJD08s", 
+                    "https://www.youtube.com/watch?v=dISNgvVpWlo", 
+                    "https://www.youtube.com/watch?v=b73BI9eUkjM", 
+                    "https://www.youtube.com/watch?v=FzVR_fymZw4"
+
+            ]
+
+baes = [
+
+                    "Lisa", 
+                    "Jisoo", 
+                    "Rosé", 
+                    "Jennie"
+        ]
+
+
+pokemon_text = [
+                    ".    _.----.        ____                 ___    ___     ____         .\n",
+                    "._.-'       `.     |    |  /`.          |   \  /   |   |    \  |`.   .\n",
+                    ".\      __    \    '-.  | /   `.  ___   |    \/    |   '-.   \ |  |  .\n",
+                    ". \.    \ \   |  __  |  |/    ,','_  `. |          | __  |    \|  |  .\n",
+                    ".  \    \/   /,' _`.|      ,' / / / /   |          ,' _`.|     |  |  .\n",
+                    ".   \     ,-'/  /   \    ,'   | \/ / ,`.|         /  /   \  |     |  .\n",
+                    ".    \    \ |   \_/  |   `-.  \    `'  /|  |    ||   \_/  | |\    |  .\n",
+                    ".     \    \ \      /       `-.`.___,-' |  |\  /| \      /  | |   |  .\n",
+                    ".      \    \ `.__,'|  |`-._    `|      |__| \/ |  `.__,'|  | |   |  .\n",
+                    ".       \_.-'       |__|    `-._ |              '-.|     '-.| |   |  .\n",
+                    ".                               `'                            '-._|  .\n"
+
                 ]

@@ -1,14 +1,11 @@
 # Nic: 
-    - Make to-do-list
-    - Run the code when it's ready
-    - Modify pokemon.py to return instead of print to terminal
-    - Making sure pokemon die and dont go negative health
-    - adding healing, buying potions/balls/favors
-    - look into adding health bars
-    - look into adding pictures
-
+    - Add health bars + relevant info to appear during battle commands
+    - make it to where dead pokemon cannot attack other pokemon...
+    - better user experience
+    - make it so battlers have to take turns 
+    
 # Sean:
-    - initialize trainer with random entry level pokemon
+    - fix the availablilty status in pokemon json
     - pokeballs?? (capturing when weak, higher chance of catching the weaker they are. different tiers of pokeballs)
     - research gui for pokemon
     - add different moves for pokemon
@@ -20,10 +17,11 @@
     - add experience
         - 1 damage dealt, 3 exp
     - evolution
-    - tweak damage numbers (fix rounding issue)
+    - add capture method
+    - add currency for pokemon kills
     - integrate more pokemon types
         - add in damage for type relationships (json stats, pokemon.py)
-    - command to see inventory, pokemon, stats (experience, etc.) EVERYTHING
+    - command to see inventory, pokemon, stats (experience, etc.) EVERYTHING *******************(NICK DOING IT BECAUSE YOU AREN'T DOING SHIT)***************** (-10% equity)
 
 
 trainers are intialized on member on_member_join

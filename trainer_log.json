@@ -34,5 +34,140 @@
         "name": "iamsmore#1415",
         "potions": 0,
         "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "squirtle",
+            "squirtle"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "charmander"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "bulbasaur",
+            "caterpie"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "bulbasaur"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "bulbasaur",
+            "squirtle"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "squirtle",
+            "bulbasaur"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "bulbasaur"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "squirtle",
+            "charmander"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "charmander",
+            "bulbasaur"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "squirtle",
+            "caterpie"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "bulbasaur",
+            "squirtle"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "bulbasaur",
+            "caterpie"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "squirtle"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "charmander",
+            "squirtle"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
+    },
+    {
+        "pokemon_list": [
+            "caterpie",
+            "bulbasaur"
+        ],
+        "name": "iamsmore",
+        "potions": 0,
+        "currently_active": 0
     }
 ]

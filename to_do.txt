@@ -9,13 +9,12 @@
     - pokeballs?? (capturing when weak, higher chance of catching the weaker they are. different tiers of pokeballs)
     - research gui for pokemon
     - add different moves for pokemon
+
     - add shop to buy potions/steroids
     - currency attribute to trainer class
 
 
 # Vas: 
-    - add experience
-        - 1 damage dealt, 3 exp
     - evolution
     - add capture method
     - add currency for pokemon kills
